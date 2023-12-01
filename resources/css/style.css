@@ -1,0 +1,679 @@
+/* ! Universal styles */
+/* Root styles */
+:root {
+  /* Colors */
+  --primary-black: #1E1E1E;
+  --dark-black: #141414;
+  --primary-lighter: #222323;
+  --cream: #F5F7F8;
+  --white: #FFF;
+  --dark-gold: #9C8E7F;
+  --gold: #BFB4A8;
+  --light-gold: #E7E0D8;
+  /* Fonts */
+  --heading-font: 'Playfair Display', 'serif';
+  --text-font: 'Lato', 'sans-serif';
+}
+
+/* HTML root styles */
+html {
+  /* Smooth scrolling */
+  scroll-behavior: smooth;
+}
+
+/* Body styles */
+body {
+  background-color: var(--primary-black);
+  color: var(--cream);
+  /* Font declarations */
+  font-family: var(--text-font);
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  /* Include padding and borders in width calculations */
+  box-sizing: border-box; 
+}
+
+/* ! Hero styles */
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  /* Background Image */
+  background-image: url("../images/images-webP/Hero-image.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 31, 31, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ! Navbar */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  width: 86%;
+  height: 90px;
+  background-color: var(--dark-black);
+  /* box-shadow: horizontal-offset vertical-offset blur-radius spread-radius color; */
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar-left {
+  justify-self: start;
+  margin-left: 30px;
+}
+
+.navbar-middle {
+  justify-self: center;
+}
+
+.navbar-right {
+  justify-self: end;
+  margin-right: 30px;
+}
+
+.nav-container-left {
+  display: flex;
+  align-items: center;
+}
+
+.hero-container.nav-link {
+  margin-left: 15px;
+}
+
+.nav-link,
+.owner-link {
+  color: var(--gold);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--text-font);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover,
+.owner-link:hover {
+  color: var(--cream);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.navbar-middle ul > li {
+  display: inline;
+  list-style-type: none;
+}
+
+.navbar-middle ul > li:nth-child(1),
+.navbar-middle ul > li:nth-child(2) {
+  margin-right: 30px;
+}
+
+.nav-container-right {
+  display: flex;
+  align-items: center;
+}
+
+.lock-icon {
+  margin-left: 30px;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* ! Rest of Hero */
+.hero-content {
+  width: 86%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+}
+
+h1 {
+  font-family: var(--heading-font);
+  color: var(--cream);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  font-size: 4.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+h2 {
+font-family: var(--heading-font);
+color: var(--gold);
+text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+font-size: 3.5rem;
+font-weight: 400;
+text-align: center;
+letter-spacing: 1px;
+line-height: 1.3;
+margin-bottom: 30px;
+}
+
+h2.alternative {
+  font-family: var(--text-font);
+  color: var(--cream);
+  font-size: 2rem;
+  margin-top: 15px;
+}
+
+h3 {
+  font-family: var(--heading-font);
+  color: var(--gold);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+h4 {
+  font-family: var(--heading-font);
+  color: var(--gold);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+p {
+  line-height: 1.3;
+  /* Optimal readability, it's recommended to keep the line length of text between 50 and 75 characters per line */
+  max-width: 60ch;
+}
+
+.button {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 15px 35px;
+  text-decoration: none;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button.primary {
+  /* Makes background twice as wide as the button, height unchanged */
+  background-size: 200% 100%;
+  /* Starts with right half of background image in view */
+  background-position: right bottom;
+  /* Two-color gradient: gold on left, dark gold on right */
+  background-image: linear-gradient(to right, var(--gold) 50%, var(--dark-gold) 50%);  color: var(--primary-black);
+}
+
+.button.primary:hover {
+  /* On hover, slides background to show gold part from the left */
+  background-position: left bottom;
+}
+
+.button.primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+/* ! About section */
+
+main {
+  position: relative;
+  z-index: 5;
+}
+
+#about {
+  padding: 150px 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-lighter);
+  border-top: 1px solid var(--primary-black);
+}
+
+.article-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+}
+
+article > img {
+  display: block;
+  width: 60%;
+  height: auto;
+  margin: 60px auto;
+  transition: all 0.5s ease-in-out;
+}
+
+article > img:hover {
+  transform: scale(1.1);
+}
+
+.button.secondary {
+  width: max-content;
+  border: 1px solid var(--dark-gold);
+  color: var(--dark-gold);
+}
+
+.button.secondary:hover {
+  border: 1px solid var(--cream);
+  color: var(--cream);
+}
+
+.button.secondary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+/* ! Cabin cards section */
+
+#cabins {
+  padding: 150px 7%;
+  background-color: var(--primary-black);
+}
+
+.card-content > h3 {
+  height: auto;
+}
+
+.cabins-content > p {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.card-content p {
+  min-height: auto;
+  margin: 0 auto;
+}
+
+.cabin-cards-container {
+  padding: 60px 0;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+
+.cabin-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: arrow;
+  transition: all 0.5s ease-in-out;
+  height: 100%;
+}
+
+.cabin-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+  transform: scale(1.015);
+}
+
+.cabin-card > img {
+  width: 100%;
+  height: auto; 
+}
+
+.cabin-card > img:hover {
+  transform: scale(1);
+}
+
+.card-content {
+  flex-grow: 1; 
+  background-color: var(--primary-lighter);
+  padding: 30px;
+  margin-top: -60px;
+}
+
+.divider {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+/* ! Footer section */
+
+#contact {
+  padding: 60px 7%;
+  background-color: var(--dark-black);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  text-align: center;
+}
+
+.legal {
+  padding: 30px 7%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.875rem;
+  text-shadow: none;
+  color: rgba(245, 248, 250, 0.6);
+}
+
+.underline {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Left block */
+.left-one,
+.left-two {
+  margin-bottom: 15px;
+}
+
+.left-three {
+  line-height: 1.5;
+}
+
+.footer-left div a {
+  display: flex;
+  justify-content: center;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--gold);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-left div a:hover {
+  text-decoration: underline;
+  color: var(--cream);
+}
+
+/* Middle block */
+.middle-one,
+.middle-two,
+.middle-three {
+  margin-bottom: 15px;
+}
+
+.footer-middle div a {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--gold);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-middle div a:hover {
+  text-decoration: underline;
+  color: var(--cream);
+}
+
+/* Right block */
+.right-one,
+.right-two,
+.right-three {
+  margin-bottom: 15px;
+}
+
+.footer-right div a {
+  display: flex;
+  justify-content: center;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--gold);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-right div a:hover {
+  text-decoration: underline;
+  color: var(--cream);
+}
+
+/* ! Responsiveness */
+
+@media only screen and (max-width: 1380px) {
+  .cabin-cards-container {
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1197px) {
+  /* Cabin cards section */
+  .card-content {
+    padding: 15px;
+  }
+
+}
+
+@media only screen and (max-width: 957px) {
+  /* Body styles */
+  body {
+    font-size: 14px; 
+  }
+
+  /* Navbar */
+  .navbar-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+  }
+
+  .menu-icon {
+    display: inline-block;
+  }
+
+  .hero-container.nav-link,
+  .nav-link,
+  .lock-icon {
+    display: none;
+  }
+
+  /* Rest of Hero */
+  h1 {
+    font-size: 3.5rem;
+  }
+  
+  h2 {
+  font-size: 2.5rem;
+  }
+  
+  h2.alternative {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    font-size: 0.875rem;
+  }
+
+  /* About section */
+  #about {
+    padding: 60px 5%;
+  }
+
+  article > img {
+    width: 60%;
+  }
+
+  /* Cards */
+  #cabins {
+    padding: 60px 5%;
+  }
+
+  .owner-link {
+    font-size: 0.875rem;
+  }
+
+  /* Contact section */
+  #contact {
+    padding: 60px 5%;
+  }
+
+  /* Footer section */
+  .legal {
+    padding: 30px 5%;
+  }
+}
+
+@media only screen and (max-width: 699px) {
+  .divider {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  /* Footer section */
+  .left-one > a,
+  .left-two > a,
+  .left-three > a {
+    line-height: 1.5;
+  }
+
+  .middle-one > a,
+  .middle-two > a,
+  .middle-three > a,
+  .middle-four > a {
+    line-height: 1.5;
+  }
+
+  .right-one > a,
+  .right-two > a,
+  .right-three > a,
+  .right-four > a {
+    line-height: 1.5;
+  }
+}
+
+@media only screen and (max-width: 653px) {
+  /* About section */
+  #about {
+    padding: 30px 5%;
+  }
+
+  .article-container {
+    grid-template-columns: 1fr;
+  }
+
+  .article-container p {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #paragraph-one {
+    margin-bottom: 15px;
+  }
+
+  article > img {
+    margin: 30px auto;
+  }
+
+  /* Cards */
+  #cabins {
+    padding: 30px 5%;
+  }
+
+  #filter-button {
+    margin-top: -30px;
+  }
+
+  /* Contact section */
+  #contact {
+    padding: 30px 5%;
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer section */
+  #contact {
+    padding: 30px 5%;
+  }
+
+  .underline {
+    display: none;
+  }
+
+  .footer-left > h4 {
+    margin-bottom: 30px;
+  }
+
+  .footer-middle > h4 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .footer-right > h4 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 552px) {
+  /* Cards */
+  .cabin-cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+@media only screen and (max-width: 388px) {
+    /* Rest of Hero */
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+    font-size: 1.5rem;
+    }
+    
+    h2.alternative {
+      font-size: 1.25rem;
+    }
+    
+    h3 {
+      font-size: 1.75rem;
+    }
+    
+    h4 {
+      font-size: 1.5rem;
+    }
+}
