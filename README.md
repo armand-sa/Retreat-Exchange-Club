@@ -6,3 +6,4 @@ CodeCademy - WEB DEVELOPMENT FOUNDATIONS - Challenge Project: Responsive Club We
 Project Goals
 In this project, you’ll be building your own club group page that will dynamically respond as you adjust the size of your screen.
 
+![Project Image](https://github.com/armand-sa/Retreat-Exchange-Club/blob/main/Retreat%20Exchange.png?raw=true)
